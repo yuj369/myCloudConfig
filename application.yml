@@ -1,0 +1,20 @@
+# application用来切换环境，并测试config-service
+spring:
+     profiles:
+       active:
+         - dev
+---
+spring:
+     profiles: dev #开发环境
+     application:
+       name: config-dev
+---
+spring:
+  profiles: test #测试环境
+  application:
+    name: config-test
+---
+spring:
+  profiles: yw #运维环境
+  application:
+    name: config-yw

@@ -1,0 +1,59 @@
+#eureka-service
+spring:
+  profiles:
+    active: 
+      - dev
+---
+#dev-service环境配置
+server:
+  port: 7001 #设置端口
+spring:
+  profiles: dev #环境名称
+  application:
+    name: config-eureka-service-dev7001
+eureka:
+  instance:
+    hostname: dev7001 #设置IP地址
+    instance-id: config-eureka-service-dev7001 #自定义显示名称
+    prefer-ip-address: true #访问路径可以显示IP地址
+  client:
+    register-with-eureka: false #自己不能注册进去
+    fetch-registry: false #不检索服务
+    service-url:
+      defaultZone: http://test7002:7002/eureka,http://yw7003:7003/eureka #注册地址
+---
+#test-service环境配置
+server:
+  port: 7002 #设置端口
+spring:
+  profiles: test #环境名称
+  application:
+    name: config-eureka-service-test7002
+eureka:
+  instance:
+    hostname: test7002 #设置IP地址
+    instance-id: config-eureka-service-test7002 #自定义显示名称
+    prefer-ip-address: true #访问路径可以显示IP地址
+  client:
+    register-with-eureka: false #自己不能注册进去
+    fetch-registry: false #不检索服务
+    service-url:
+      defaultZone: http://dev7001:7001/eureka,http://yw7003:7003/eureka #注册地址
+---
+#yw-service环境配置
+server:
+  port: 7003 #设置端口
+spring:
+  profiles: yw #环境名称
+  application:
+    name: config-eureka-service-yw7003
+eureka:
+  instance:
+    hostname: yw7003 #设置IP地址
+    instance-id: config-eureka-service-yw7003 #自定义显示名称
+    prefer-ip-address: true #访问路径可以显示IP地址
+  client:
+    register-with-eureka: false #自己不能注册进去
+    fetch-registry: false #不检索服务
+    service-url:
+      defaultZone: http://dev7001:7001/eureka,http://test7002:7002/eureka #注册地址

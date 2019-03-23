@@ -1,0 +1,50 @@
+#eureka-client
+spring:
+  profiles:
+    active:
+      - dev
+---
+#dev-client
+server:
+  port: 8001 #设置端口
+spring:
+  profiles: dev #环境名称
+  application:
+    name: config-eureka-client-dev8001
+eureka:
+  instance:
+    instance-id: config-eureka-client-dev8001 #自定义显示名称
+    prefer-ip-address: true #访问路径可以显示IP地址
+  client:
+    service-url:
+      defaultZone: http://dev7001:7001/eureka,http://test7002:7002/eureka,http://yw7003:7003/eureka #注册地址
+---
+#test-client
+server:
+  port: 8002 #设置端口
+spring:
+  profiles: test #环境名称
+  application:
+    name: config-eureka-client-test8002
+eureka:
+  instance:
+    instance-id: config-eureka-client-test8002 #自定义显示名称
+    prefer-ip-address: true #访问路径可以显示IP地址
+  client:
+    service-url:
+      defaultZone: http://dev7001:7001/eureka,http://test7002:7002/eureka,http://yw7003:7003/eureka #注册地址
+---
+#yw-client
+server:
+  port: 8003 #设置端口
+spring:
+  profiles: yw #环境名称
+  application:
+    name: config-eureka-client-yw8003
+eureka:
+  instance:
+    instance-id: config-eureka-client-yw8003 #自定义显示名称
+    prefer-ip-address: true #访问路径可以显示IP地址
+  client:
+    service-url:
+      defaultZone: http://dev7001:7001/eureka,http://test7002:7002/eureka,http://yw7003:7003/eureka #注册地址

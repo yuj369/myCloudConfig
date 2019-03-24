@@ -8,7 +8,6 @@ spring:
     name: config-eureka-client-dev8001
 eureka:
   instance:
-    hostname: dev7001 #设置IP地址
     instance-id: config-eureka-client-dev8001 #自定义显示名称
     prefer-ip-address: true #访问路径可以显示IP地址
   client:

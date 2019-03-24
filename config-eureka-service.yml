@@ -1,9 +1,4 @@
 #eureka-service
-spring:
-  profiles:
-    active: 
-      - dev
----
 #dev-service环境配置
 server:
   port: 7001 #设置端口

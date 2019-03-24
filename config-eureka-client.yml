@@ -11,7 +11,7 @@ eureka:
     instance-id: config-eureka-client-dev8001 #自定义显示名称
     prefer-ip-address: true #访问路径可以显示IP地址
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://dev7001:7001/eureka/ #注册地址
 ---
 #test-client
@@ -27,7 +27,7 @@ eureka:
     prefer-ip-address: true #访问路径可以显示IP地址
   client:
     service-url:
-      defaultZone: http://test7002:7002/eureka #注册地址
+      defaultZone: http://test7002:7002/eureka/ #注册地址
 ---
 #yw-client
 server:
@@ -42,4 +42,4 @@ eureka:
     prefer-ip-address: true #访问路径可以显示IP地址
   client:
     service-url:
-      defaultZone: http://yw7003:7003/eureka #注册地址
+      defaultZone: http://yw7003:7003/eureka/ #注册地址

@@ -1,9 +1,4 @@
 #eureka-client
-spring:
-  profiles:
-    active:
-      - dev
----
 #dev-client
 server:
   port: 8001 #设置端口
@@ -16,8 +11,8 @@ eureka:
     instance-id: config-eureka-client-dev8001 #自定义显示名称
     prefer-ip-address: true #访问路径可以显示IP地址
   client:
-    service-url:
-      defaultZone: http://dev7001:7001/eureka #注册地址
+    serviceUrl:
+      defaultZone: http://dev7001:7001/eureka/ #注册地址
 ---
 #test-client
 server:

@@ -14,8 +14,8 @@ eureka:
   client:
     register-with-eureka: false #自己不能注册进去
     fetch-registry: false #不检索服务
-    service-url:
-      defaultZone: http://dev7001:7001/eureka/ #注册地址
+    #service-url:
+      #defaultZone: http://dev7001:7001/eureka/ #注册地址
 ---
 #test-service环境配置
 server:

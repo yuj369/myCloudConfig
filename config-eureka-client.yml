@@ -5,7 +5,7 @@ server:
 spring:
   profiles: dev #环境名称
   application:
-    name: config-eureka-client-dev8001
+    name: config-eureka-client-dev8001 #名称
 eureka:
   instance:
     instance-id: dev8001 #自定义显示名称
@@ -20,7 +20,7 @@ server:
 spring:
   profiles: test #环境名称
   application:
-    name: config-eureka-client-test8002
+    name: config-eureka-client-test8002 #名称
 eureka:
   instance:
     instance-id: test8002 #自定义显示名称
@@ -35,7 +35,7 @@ server:
 spring:
   profiles: yw #环境名称
   application:
-    name: config-eureka-client-yw8003
+    name: config-eureka-client-yw8003 #名称
 eureka:
   instance:
     instance-id: yw8003 #自定义显示名称
